@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.113.227.155:3306/shuangxing?useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: H2232285004
+  # session 失效时间
+  session:
+    timeout: 86400
+    # redis 配置
+  redis:
+    database: 0
+    port: 6379
+    host: 47.113.227.155
+    password: H2232285004
+server:
+  address: 0.0.0.0
