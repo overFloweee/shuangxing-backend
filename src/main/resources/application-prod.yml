@@ -7,6 +7,7 @@ spring:
   # session 失效时间
   session:
     timeout: 86400
+    # redis 配置
   redis:
     database: 0
     port: 6379
@@ -14,4 +15,3 @@ spring:
     password: H2232285004
 server:
   address: 0.0.0.0
-  # redis 配置
