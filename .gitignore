@@ -1,2 +1,3 @@
 /target/
 /src/main/resources/application-prod.yml
+.gitignore
