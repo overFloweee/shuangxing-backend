@@ -5,7 +5,6 @@ import lombok.Data;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,16 +21,15 @@ public class RedissonConfig
 
     private String database;
 
+    private String password;
+
     @Bean
     public RedissonClient redissonClient()
     {
         // 创建配置
         Config config = new Config();
         String redisAddress = "redis://" + host + ":" + port;
-        config
-                .useSingleServer()
-                .setAddress(redisAddress)
-                .setDatabase(Integer.parseInt(database));
+        config.useSingleServer().setAddress(redisAddress).setDatabase(Integer.parseInt(database)).setPassword(password);
 
 
         // 创建实例

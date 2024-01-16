@@ -1,6 +1,6 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://47.113.227.155:3306/shuangxing?useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: H2232285004
@@ -9,9 +9,11 @@ spring:
     timeout: 86400
     # redis 配置
   redis:
+    host: 47.113.227.155
     database: 0
     port: 6379
-    host: 47.113.227.155
     password: H2232285004
 server:
   address: 0.0.0.0
+  port: 8081
+
