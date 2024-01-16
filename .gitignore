@@ -1,3 +1,4 @@
 /target/
-/src/main/resources/application-prod.yml
-.gitignore
+/src/main/resources/*
+/test/
+/src/test/java/com/hjw/service/*
